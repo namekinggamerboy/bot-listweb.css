@@ -1,2 +1,2 @@
 # bot-listweb.css
-Bot list web css 
+Bot list website page source 
