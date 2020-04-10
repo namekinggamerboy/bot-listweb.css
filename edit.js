@@ -56,6 +56,6 @@ function flash(element) {
 
 document.body.onload = () => {
     let botId = location.href.split(location.host)[1].replace('/edit/', '').replace('/', '');
-    document.getElementById('auth').href = `/api/auth/${botId}?token=${localStorage.token}`;
-    document.getElementById('reset').href = `/api/auth/reset/${botId}?token=${localStorage.token}`;
+    document.getElementById('auth').href = `/api/auth/${botId}`;
+    document.getElementById('reset').href = `/api/auth/reset/${botId}`;
 }
