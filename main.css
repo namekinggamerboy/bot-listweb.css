@@ -347,7 +347,7 @@ code {
     display: block;
 }
 
-.input-holder {
+.pinput-holder {
     position: relative;
     width: 70%;
     max-width: 900px;
@@ -356,7 +356,7 @@ code {
     margin: 0 auto;
 }
 
-.input {
+.pinput {
     height: 28px;
     font-size: 14px;
     padding: 13px 15px;
@@ -369,29 +369,29 @@ code {
     transition: all 600ms ease;
 }
 
-.input:not(:placeholder-shown).input:not(:focus)+.placeholder {
+.pinput:not(:placeholder-shown).pinput:not(:focus)+.placeholder {
     transform: scale(.75) translateY(-39px) translateX(-5px);
     color: #888;
     z-index: 10 !important;
 }
 
-.input:focus {
+.pinput:focus {
     border-color: #00ff8c;
 }
 
-.input:focus+.placeholder {
+.pinput:focus+.placeholder {
     transform: scale(.75) translateY(-39px) translateX(-5px);
     color: #00ff8c;
     z-index: 10 !important;
 }
 
-.xinput:focus+.placeholder {
+.xpinput:focus+.placeholder {
     transform: scale(.75) translateY(-39px) translateX(-35px);
     color: #00ff8c;
     z-index: 10 !important;
 }
 
-.xinput:focus+.placeholder:after {
+.xpinput:focus+.placeholder:after {
     content: " separated by spaces"
 }
 
