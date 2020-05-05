@@ -54,8 +54,65 @@ function flash(element) {
     }, 600)
 }
 
-document.body.onload = () => {
-    let botId = location.href.split(location.host)[1].replace('/edit/', '').replace('/', '');
-    document.getElementById('auth').href = `/api/auth/${botId}`;
-    document.getElementById('reset').href = `/api/auth/reset/${botId}`;
-}
+$( document ).ready(function() {
+    let botId = location.href.split(location.host)[1].replace('/bots/edit/', '').replace('/', '');
+    $('#auth').click(() => {
+        fetch(`/api/auth/${botId}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                Swal.fire({
+                    title: 'Your authorisation token',
+                    icon: 'success',
+                    html:
+                      `Your authorisation token is <code>${data.auth}</code>`,
+                    showCloseButton: true,
+                    focusConfirm: false,
+                    confirmButtonText: 'Close',
+                    confirmButtonAriaLabel: 'close',
+                  })
+            } else {
+                Swal.fire({
+                    title: 'Your authorisation token',
+                    icon: 'error',
+                    html:
+                      `There was an error with your authorisation token.`,
+                    showCloseButton: true,
+                    focusConfirm: false,
+                    confirmButtonText: 'Close',
+                    confirmButtonAriaLabel: 'close',
+                  })
+            }
+        });
+    })
+    $('#reset').click(() => {
+        fetch(`/api/auth/reset/${botId}`)
+        .then(res => res.json())
+        .then(data => {
+            
+            if (data.success) {
+                Swal.fire({
+                    title: 'Your new authorisation token',
+                    icon: 'success',
+                    html:
+                      `Your new authorisation token is <code>${data.auth}</code>`,
+                    showCloseButton: true,
+                    focusConfirm: false,
+                    confirmButtonText: 'Close',
+                    confirmButtonAriaLabel: 'close',
+                  })
+            } else {
+                Swal.fire({
+                    title: 'Your new authorisation token',
+                    icon: 'error',
+                    html:
+                      `There was an error with your authorisation token.`,
+                    showCloseButton: true,
+                    focusConfirm: false,
+                    confirmButtonText: 'Close',
+                    confirmButtonAriaLabel: 'close',
+                  })
+            }
+        });
+    })
+})
