@@ -11,8 +11,7 @@ function submit() {
         return flash(document.getElementById('longdesc'))
     if (!document.getElementById('mcolor').value)
         return flash(document.getElementById('mcolor'))  
-  if (!document.getElementById('mimage').value)
-        return flash(document.getElementById('mimage'))
+
 
     let data = {
         token: localStorage.getItem('token'),
