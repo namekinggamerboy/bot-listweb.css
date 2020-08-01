@@ -376,18 +376,18 @@ code {
 }
 
 .pinput:focus {
-    border-color: #00ff8c;
+    border-color: #ccffff;
 }
 
 .pinput:focus+.placeholder {
     transform: scale(.75) translateY(-39px) translateX(-5px);
-    color: #00ff8c;
+    color: #ccffff;
     z-index: 10 !important;
 }
 
 .xpinput:focus+.placeholder {
     transform: scale(.75) translateY(-39px) translateX(-35px);
-    color: #00ff8c;
+    color: #ccffff;
     z-index: 10 !important;
 }
 
@@ -414,7 +414,7 @@ code {
 }
 
 textarea:focus+.textarea-placeholder {
-    color: #00ff8c;
+    color: #ccffff;
 }
 
 textarea {
