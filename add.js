@@ -26,7 +26,7 @@ function submit() {
         long: document.getElementById('longdesc').value
     };
 
-    fetch("/new", {
+    fetch("/api/bots/submit", {
         method: 'POST',
         body: JSON.stringify(data),
         headers:{
