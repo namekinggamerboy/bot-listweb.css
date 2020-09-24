@@ -1,5 +1,7 @@
 'use strict';
 
+$(document).ready(function () {
+
   var converter = new showdown.Converter();
 
   var switches = {
@@ -28,7 +30,6 @@
     footer: ''
   };
 
-$(document).ready(function () {
   function resetEmbed() {
     $('.embed-inner').html('');
     $('.embed-footer').remove();
