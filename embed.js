@@ -55,7 +55,7 @@ $(document).ready(function () {
     } else {
       $('.embed-inner').append('<div class="embed-title">' + embed.title + '</div>');
 
-      // update source
+      // update
       if (switches.useVars) {
         source += 'title=' + embed.title;
       } else {
