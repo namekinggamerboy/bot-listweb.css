@@ -428,7 +428,9 @@ $(document).ready(function () {
     switches.useVars = !switches.useVars;
     updateEmbed(embed);
   });
- function embedsubmit(){
- document.getElementById('embedmessage').submit();
-}
 });
+
+
+ function embedsubmit(){
+ document.getElementById('form').submit();
+}
