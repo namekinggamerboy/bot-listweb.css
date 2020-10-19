@@ -170,7 +170,7 @@ $(document).ready(function () {
 
       var field = _ref;
 
-      $('.embed-inner .fields').append('\n        <div class="field ' + (field.inline && 'inline') + '">\n          <div class="field-name">' + field.name + '</div>\n          <div class="field-value">' + converter.makeHtml(field.value) + '</div>\n        </div>\n      ');
+      $('.embed-inner .fields').append('\n        <div class="field ' + (field.inline && 'inline') + '">\n          <div class="field-name" name="field-name">' + field.name + '</div>\n          <div class="field-value" name="field-value">' + converter.makeHtml(field.value) + '</div>\n        </div>\n      ');
 
       // add field
       if (switches.useVars) {
