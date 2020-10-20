@@ -11,7 +11,7 @@ $(document).ready(function () {
     useVars: false
   };
 
-  var fields = 0;
+  var fields = 1;
 
   var source = '';
 
