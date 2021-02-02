@@ -1,1 +1,1 @@
-{ "type": "web", "url": "https://meeroyal.herokuapp.com/uplife/login" }
+{ "type": "web", "url": "https://meeroyal.herokuapp.com/uplife/login", "config": "https://meeroyal.herokuapp.com/uplife/type" }
