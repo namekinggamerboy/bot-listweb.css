@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  var select = $('select[multiple]');
+  var select = document.querySelectorAll('[data-multiple="true"]');
   var options = select.find('option');
 
   var div = $('<div />').addClass('selectMultiple');
@@ -22,7 +22,7 @@ $(document).ready(function () {
 
   active.append($('<div />').addClass('arrow'));
   div.append(active).append(list);
-
+ 
   select.wrap(div);
 
   $(document).on('click', '.selectMultiple ul li', function (e) {
