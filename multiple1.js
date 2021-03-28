@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  var select = $('select[multiple-one]');
+  var select = $('select[data-multiple="true"]');
   var options = select.find('option');
 
   var div = $('<div />').addClass('selectMultiple');
