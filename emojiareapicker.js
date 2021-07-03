@@ -1,4 +1,4 @@
-  const emojiInputs = document.querySelectorAll('[data-emoji="true"]');
+  const emojiInputs = document.querySelectorAll('[data-bs-emoji="true"]');
 
  $( document ).ready(function() {
 
