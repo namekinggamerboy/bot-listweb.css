@@ -43,8 +43,8 @@
 
     const emojiTrigger = document.createElement("a");
     emojiTrigger.style.position = "absolute";
-    emojiTrigger.style.top = "2px";
-    emojiTrigger.style.right = "2px";
+    emojiTrigger.style.top = "5px";
+    emojiTrigger.style.right = "10px";
     emojiTrigger.style.textDecoration = "none";
     emojiTrigger.setAttribute("href", "javascript:void(0)");
     emojiTrigger.innerHTML =
