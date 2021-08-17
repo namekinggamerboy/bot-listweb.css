@@ -89,8 +89,8 @@ $('#emojimodel').modal('toggle')
 
     const emojiTrigge = document.createElement("a");
     emojiTrigge.style.position = "absolute";
-    emojiTrigge.style.top = "2px";
-    emojiTrigge.style.right = "2px";
+    emojiTrigge.style.top = "5px";
+    emojiTrigge.style.right = "10px";
     emojiTrigge.style.textDecoration = "none";
     emojiTrigge.setAttribute("href", "javascript:void(0)");
     emojiTrigge.innerHTML =
