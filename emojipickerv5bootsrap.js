@@ -1,18 +1,13 @@
   const emojiInputs = document.querySelectorAll('[data-picker="true"]');
   const emojiIn = document.querySelectorAll('[data-bs-emoji="true"]');
-
  $( document ).ready(function() {
-
     emojiInputs.forEach(e => {
       generateElements(e);
     });
-
     emojiIn.forEach(e => {
       generateE(e);
     });
-
-    });   
-        
+    });
     function generateElements(emojiInput) {
     const clickLink = event => {
       event.preventDefault();
@@ -24,23 +19,16 @@
         emojiInput.value.substring(caretPos);
       emojiPicker.style.display = "none";
       emojiInput.focus();
-
-      //trigger ng-change for angular
       if (typeof angular !== "undefined") {
         angular.element(emojiInput).triggerHandler("change");
       }
     };
-
     emojiInput.style.width = "100%";
-
     const emojiContainer = document.createElement("div");
     emojiContainer.style.position = "relative";
-
     const parent = emojiInput.parentNode;
     parent.replaceChild(emojiContainer, emojiInput);
     emojiContainer.appendChild(emojiInput);
-
-
     const emojiTrigger = document.createElement("a");
     emojiTrigger.style.position = "absolute";
     emojiTrigger.style.top = "5px";
@@ -53,13 +41,8 @@
   var modal1 = new bootstrap.Modal(document.getElementById('emojimodel')); 
     modal1.toggle();
     };
-
     emojiContainer.appendChild(emojiTrigger);
- 
     }
-
-
-   
     function generateE(emojiInpu) {
     const clickLink = event => {
       event.preventDefault();
@@ -71,23 +54,16 @@
         emojiInpu.value.substring(caretPos);
       emojiPicker.style.display = "none";
       emojiInpu.focus();
-
-      //trigger ng-change for angular
       if (typeof angular !== "undefined") {
         angular.element(emojiInpu).triggerHandler("change");
       }
     };
-
     emojiInpu.style.width = "100%";
-
     const emojiContaine = document.createElement("div");
     emojiContaine.style.position = "relative";
-
     const parent = emojiInpu.parentNode;
     parent.replaceChild(emojiContaine, emojiInpu);
     emojiContaine.appendChild(emojiInpu);
-
-
     const emojiTrigge = document.createElement("a");
     emojiTrigge.style.position = "absolute";
     emojiTrigge.style.top = "5px";
@@ -100,7 +76,5 @@
     var modal1 = new bootstrap.Modal(document.getElementById('eemojimodel')); 
     modal1.toggle();
     };
-
     emojiContaine.appendChild(emojiTrigge);
- 
     }
